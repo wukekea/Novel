@@ -1,46 +1,47 @@
 <script setup>
-import NovelType from './components/index/NovelType.vue'
+import NovelTabs from './components/index/NovelTabs.vue'
+import NovelCard from './components/index/NovelCard.vue'
 
 </script>
 
 <template>
-    <div>
-        <header>
-            header
-        </header>
+    <!-- <div class="div"> -->
+        <el-container class="div">
+            <el-header class=".el-header">
+                <!-- <NovelCard/> -->
+            </el-header>
 
-        <main>
-            main
-        </main>
-        <NovelType/>
-    </div>
+            <el-main class=".el-main">
+                <NovelTabs/>
+            </el-main>
+
+            <el-footer class=".el-footer">
+                Footer
+            </el-footer>
+
+        </el-container>
+    <!-- </div> -->
+
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style scoped lang="scss">
+@mixin border-styles {  
+    border: 1px solid red;
+}  
+.div {
+    @include border-styles;
+    width: 90vw;
+    height: 100vh;
+}
+.el-header {
+    @include border-styles;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.el-main {
+    @include border-styles;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.el-footer {
+    @include border-styles;
 }
 </style>
