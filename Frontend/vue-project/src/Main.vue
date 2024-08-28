@@ -1,6 +1,7 @@
 <script setup>
 import NovelTabs from './components/index/NovelTabs.vue'
 import NovelCard from './components/index/NovelCard.vue'
+import NovelHead from './components/index/NovelHead.vue'
 
 </script>
 
@@ -8,7 +9,7 @@ import NovelCard from './components/index/NovelCard.vue'
     <!-- <div class="div"> -->
         <el-container class="div">
             <el-header class=".el-header">
-                <!-- <NovelCard/> -->
+                <NovelHead/>
             </el-header>
 
             <el-main class=".el-main">

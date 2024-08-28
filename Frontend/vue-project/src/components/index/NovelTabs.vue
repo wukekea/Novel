@@ -46,7 +46,7 @@ const novelItems = reactive([{
 
 
 <template>
-  <el-tabs type="border-card" stretch=true style="width: 100%;">
+  <el-tabs type="border-card" :stretch="true" style="width: 100%;">
     <el-tab-pane v-for="(item, index) in tabItems" :key="index" :label="item.name">
       <NovelCard v-for="(novelItem, novelIndex) in novelItems" :key="novelIndex" class="novel-card"/>
     </el-tab-pane>
